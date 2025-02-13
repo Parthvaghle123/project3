@@ -1,0 +1,23 @@
+.box{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color:whitesmoke;
+}
+body{
+    background-color: rgb(106, 154, 183);
+}
+.navbar{
+    border-bottom: 1px solid #ccc;
+    background-color: whitesmoke;
+}
+.head{
+    color: rgb(154, 146, 146);
+}
+.btn{
+    
+    font-size: 20px;
+}
+.btn:hover{
+    background-color: white;
+    color: green;
+}
