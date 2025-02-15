@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 3,
             image: 'https://starbucksstatic.cognizantorderserv.com/Items/Small/109617_1.png',
             title: '250G Diwali Blend',
-            price: 1100
+            price: 110
         },
         {
             id: 4,
