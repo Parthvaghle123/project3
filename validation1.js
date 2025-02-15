@@ -1,64 +1,84 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", function (event) {
       let isValid = true;
-      let firstName = document.querySelector("input[placeholder='First Name']").value.trim();
-      let lastName = document.querySelector("input[placeholder='Last Name']").value.trim();
-      let email = document.querySelector("input[placeholder='Email Address']").value.trim();
-      let password = document.querySelector("input[placeholder='Password']").value.trim();
-      let confirmPassword = document.querySelector("input[placeholder='Confirm Password']").value.trim();
+  
+      // Get input values
+      let firstName = document.getElementById("firstName").value.trim();
+      let lastName = document.getElementById("lastName").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value.trim();
+      let confirmPassword = document.getElementById("confirmPassword").value.trim();
       let address = document.getElementById("address").value.trim();
       let checkBox = document.getElementById("myCheck");
   
-      document.querySelectorAll(".error").forEach(e => e.textContent = "");
+      // Clear previous error messages
+      document.querySelectorAll(".error").forEach(e => e.remove());
   
+      // Validation checks
       if (firstName === "") {
-        showError("First Name is required", "input[placeholder='First Name']");
+        showError("First Name is required", "firstName");
         isValid = false;
       }
+  
       if (lastName === "") {
-        showError("Last Name is required", "input[placeholder='Last Name']");
+        showError("Last Name is required", "lastName");
         isValid = false;
       }
   
       if (!validateEmail(email)) {
-        showError("Invalid email format", "input[placeholder='Email Address']");
+        showError("Invalid email format", "email");
         isValid = false;
       }
   
-      if (password.length < 6) {
-        showError("Password must be at least 6 characters long", "input[placeholder='Password']");
+      if (!validatePassword(password)) {
+        showError("Password must be at least 6 characters, include an uppercase letter, a lowercase letter, and a number", "password");
         isValid = false;
       }
+  
       if (password !== confirmPassword) {
-        showError("Passwords do not match", "input[placeholder='Confirm Password']");
+        showError("Passwords do not match", "confirmPassword");
         isValid = false;
       }
   
       if (address === "") {
-        showError("Address is required", "#address");
+        showError("Address is required", "address");
         isValid = false;
       }
   
       if (!checkBox.checked) {
-        alert("You must agree to the terms.");
+        showError("You must agree to the terms", "myCheck", true);
         isValid = false;
       }
-        if (!isValid) {
+  
+      if (!isValid) {
         event.preventDefault();
       }
     });
   
-    function showError(message, selector) {
-      let inputField = document.querySelector(selector);
+    function showError(message, elementId, isCheckbox = false) {
+      let inputField = document.getElementById(elementId);
       let errorDiv = document.createElement("div");
       errorDiv.textContent = message;
       errorDiv.classList.add("error");
       errorDiv.style.color = "red";
-      inputField.parentNode.appendChild(errorDiv);
+      errorDiv.style.fontSize = "14px";
+      errorDiv.style.marginTop = "5px";
+  
+      if (isCheckbox) {
+        inputField.parentNode.appendChild(errorDiv);
+      } else {
+        inputField.insertAdjacentElement("afterend", errorDiv);
+      }
     }
   
     function validateEmail(email) {
       let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailPattern.test(email);
     }
+  
+    function validatePassword(password) {
+      let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+      return passwordPattern.test(password);
+    }
   });
+  
