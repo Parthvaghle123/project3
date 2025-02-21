@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const searchInput = document.getElementById('search');
     const searchButton = document.getElementById('searchButton');
+    const rootElement = document.getElementById('root1');
 
     const filterAndDisplayItems = () => {
         const searchData = searchInput.value.toLowerCase();
@@ -49,22 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
         displayItems(filteredData);
     };
 
-    searchInput.addEventListener('input', () => {
-        if (searchInput.value === "") {
-            displayItems(products); 
-        }
-    });
-
-    searchButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        filterAndDisplayItems();
-    });
-
+    // Function to display the filtered or all items
     const displayItems = (items) => {
-        let rootElement = document.getElementById('root1');
-
         if (!rootElement) {
-            console.error("Element with ID 'root' not found!");
+            console.error("Element with ID 'root1' not found!");
             return;
         }
 
@@ -86,5 +75,29 @@ document.addEventListener("DOMContentLoaded", () => {
             : "<p class='text-danger text-center p'>No products found</p>";
     };
 
+    // Event listener for the search box input field
+    searchInput.addEventListener('input', () => {
+        if (searchInput.value === "") {
+            displayItems(products); // Display all products if input is empty
+        }
+    });
+
+    // Event listener for the search button
+    searchButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        filterAndDisplayItems();
+    });
+
+    // Function to handle page switching (e.g., "next page")
+    const handlePageSwitch = () => {
+        // Logic to handle the page switch - reset or preserve data if necessary
+        // If switching to another "page", you can reload the products or apply the search again
+        displayItems(products);  // Make sure the items are shown on the new page
+    };
+
+    // If switching between pages, ensure the right content is loaded
+    handlePageSwitch();
+
+    // Ensure that products are displayed after the initial page load
     displayItems(products);
 });
