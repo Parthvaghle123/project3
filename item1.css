@@ -115,8 +115,7 @@ h4{
 .btn{
     background-color: none;
     width: 20%;
-    margin: 0;
-}
+ }
 .btn:hover{
     background-color: white;
 }
