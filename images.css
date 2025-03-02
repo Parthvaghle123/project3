@@ -47,7 +47,10 @@ h2 {
 
 @media (max-width: 480px) {
     #root {
-        grid-template-columns:repeat(2,1fr); 
+        grid-template-columns:repeat(3,1fr); 
+    }
+    .img-box{
+        width: 90%;
     }
 
    
