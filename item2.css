@@ -1,9 +1,10 @@
-#root {
-    width:100%;
+#root1 {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); 
-    grid-gap: 15px;
+    grid-gap: 10px;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .box {
@@ -19,11 +20,9 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 310px;
 }
-
 .box:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: whitesmoke;
 }
 
 .img-box {
@@ -33,14 +32,15 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 10px;
 }
 
-.images {
+.img {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius:20px;
+    border-radius: 20px;
 }
 
 .bottom {
@@ -84,19 +84,21 @@ h3{
 }
 
 @media (min-width: 768px) {
-    #root {
+    #root1 {
         grid-template-columns: repeat(2, 1fr); 
-    }  
+    }
+    
+  
 }
 
 @media (min-width: 2560px) {
-    #root {
+    #root1 {
         grid-template-columns: repeat(3, 1fr); 
     }
 }
 
 @media (max-width: 480px) {
-    #root {
+    #root1 {
         grid-template-columns: 1fr; 
     }
     .box{
@@ -105,15 +107,15 @@ h3{
    
 }
 @media (min-width: 1440px) {
-    #root {
+    #root1 {
         grid-template-columns: repeat(3, 1fr); 
     }
     .box{
-        width: 95%;
+        width: 100%;
     }
 }
 @media (min-width: 1024px) {
-    #root {
+    #root1 {
         grid-template-columns: repeat(3, 1fr); 
     }
 }
