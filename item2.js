@@ -70,8 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             image: 'https://starbucksstatic.cognizantorderserv.com/Items/Small/115986.png',
             title: 'Classic Hot Coffee',
             per: 'Savour our premium coffee made with top 3% Arabica beans in ...',
-            price:  157,
-            qty:1
+            price:  157
         },
         {
             id: 9,
@@ -98,11 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
             price:  351,
             qty: 1
         },
-    
     ];
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const minItems = 35; // Maximum cart limit
 
     const displayItems = (items) => {
         const root = document.getElementById('root1');
@@ -128,11 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const addToCart = (id) => {
-        if (cart.length >= minItems) {
-            alert(`You can only add up to ${minItems} items to the cart!`);
-            return;
-        }
-        
         const product = products.find(p => p.id === id);
         const existing = cart.find(p => p.id === id);
 
@@ -181,10 +173,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addToCart = addToCart;
     window.increaseQty = (index) => {
-        cart[index].qty++;
-        localStorage.setItem('cart', JSON.stringify(cart));
-        displayCart();
-    };
+        if (cart[index].qty < 100) { //limit quantity to 100
+            cart[index].qty++;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+    }
 
     window.decreaseQty = (index) => {
         if (cart[index].qty > 1) {
