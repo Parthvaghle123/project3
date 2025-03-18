@@ -171,15 +171,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-   window.addToCart = addToCart;
+    window.addToCart = addToCart;
     window.increaseQty = (index) => {
-        if (cart[index].qty < 100) { //limit quantity to 100
-            cart[index].qty++;
-            localStorage.setItem('cart', JSON.stringify(cart));
-            displayCart();
-        }
-
-    }
+        cart[index].qty++;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart();
+    };
 
     window.decreaseQty = (index) => {
         if (cart[index].qty > 1) {
