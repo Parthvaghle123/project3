@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     };
+    const updateCartCount = () => {
+        const cartCountElement = document.getElementById('cart-count');
+        const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+        cartCountElement.innerText = totalItems;
+        cartCountElement.style.display = totalItems > 0 ? 'inline-block' : 'none';
+    };
 
     const addToCart = (id) => {
         const product = products.find(p => p.id === id);
@@ -44,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         localStorage.setItem('cart', JSON.stringify(cart));
         displayCart();
+        updateCartCount();
+
     };
 
     const displayCart = () => {
@@ -84,6 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
         cart[index].qty++;
         localStorage.setItem('cart', JSON.stringify(cart));
         displayCart();
+        updateCartCount();
+
     };
 
     window.decreaseQty = (index) => {
@@ -92,12 +102,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         localStorage.setItem('cart', JSON.stringify(cart));
         displayCart();
+        updateCartCount();
+
     };
 
     window.removeFromCart = (index) => {
         cart.splice(index, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
         displayCart();
+        updateCartCount();
+
     };
 
     const searchInput = document.getElementById('search');
@@ -128,5 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (document.getElementById('cart')) {
         displayCart();
+        updateCartCount();
+
     }
 });

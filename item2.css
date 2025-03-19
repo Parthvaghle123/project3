@@ -90,7 +90,6 @@ h3{
     
   
 }
-
 @media (min-width: 2560px) {
     #root1 {
         grid-template-columns: repeat(3, 1fr); 
@@ -119,14 +118,7 @@ h3{
         grid-template-columns: repeat(3, 1fr); 
     }
 }
-.btn{
-    background-color: none;
-    width: 20%;
-    margin: 0;
-}
-.btn:hover{
-    background-color: white;
-}
+
 .btn1{
     width: 30%;
 }
@@ -157,4 +149,12 @@ input[type="search"] {
 }
 .head{
     font-weight: bold;
+}
+#cart-count {
+    font-size: 15px;
+    padding: 5px 7px;
+    display: none; /* Initially hide if cart is empty */
+}
+.btn3{
+    width: 100%;
 }

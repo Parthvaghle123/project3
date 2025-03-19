@@ -112,13 +112,6 @@ h4{
         grid-template-columns: repeat(3, 1fr); 
     }
 }
-.btn{
-    background-color: none;
-    width: 20%;
- }
-.btn:hover{
-    background-color: white;
-}
 .btn1{
     width: 30%;
 }
@@ -135,6 +128,9 @@ h4{
     color: green;
     border: 1px solid green;
     font-weight: bold;
+}
+.btn3{
+    width: 100%;
 }
 input[type="search"] {
     border-top: none;
