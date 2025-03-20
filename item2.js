@@ -70,7 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
             image: 'https://starbucksstatic.cognizantorderserv.com/Items/Small/115986.png',
             title: 'Classic Hot Coffee',
             per: 'Savour our premium coffee made with top 3% Arabica beans in ...',
-            price:  157
+            price:  157 ,         
+             qty: 1
+
         },
         {
             id: 9,
