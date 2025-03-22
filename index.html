@@ -11,13 +11,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .error {
-        color: red;
-        font-size: 14px;
-        margin-top: 5px;
-      }
-    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -52,28 +45,47 @@
       </div>
     </nav>
 
-    <!-- Login Form -->
+    <!-- Login Forms -->
     <div class="container">
       <div class="row justify-content-center mt-5">
+        <!-- First Login Form -->
         <div class="col-lg-4 col-md-6 col-11 box mb-4">
-          <form id="loginForm" onsubmit="return validateForm(event)" action="index3.html">
+          <form id="loginForm1" onsubmit="return validateForm(event)" action="index3.html">
             <h2 class="text-center mt-4 mb-3 head">Login</h2>
-
             <div class="form-floating mb-3">
-              <input type="email" class="form-control head" id="email" name="email" placeholder="example@mail.com" required />
-              <label for="email" class="form-label head">Email Address</label>
+              <input type="email" class="form-control head" id="email1" name="email" placeholder="example@mail.com" required />
+              <label for="email1" class="form-label head">Email Address</label>
             </div>
-
             <div class="form-floating mb-3">
-              <input type="password" class="form-control head" id="password" name="password" placeholder="********" required />
-              <label for="password" class="form-label head">Password</label>
+              <input type="password" class="form-control head" id="password1" name="password" placeholder="********" required />
+              <label for="password1" class="form-label head">Password</label>
             </div>
-
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" id="myCheck" name="remember" />
-              <label class="form-check-label head" for="myCheck">Remember Me</label>
+              <input class="form-check-input" type="checkbox" id="myCheck1" name="remember" />
+              <label class="form-check-label head" for="myCheck1">Remember Me</label>
             </div>
+            <div class="d-grid mb-3">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
 
+        <!-- Second Login Form -->
+        <div class="col-lg-4 col-md-6 col-11 box mb-4">
+          <form id="loginForm2" onsubmit="return validateForm(event)" action="index3.html">
+            <h2 class="text-center mt-4 mb-3 head">Login</h2>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control head" id="email2" name="email" placeholder="example@mail.com" required />
+              <label for="email2" class="form-label head">Email Address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control head" id="password2" name="password" placeholder="********" required />
+              <label for="password2" class="form-label head">Password</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="myCheck2" name="remember" />
+              <label class="form-check-label head" for="myCheck2">Remember Me</label>
+            </div>
             <div class="d-grid mb-3">
               <button type="submit" class="btn btn-success">Submit</button>
             </div>

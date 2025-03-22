@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Starbucks Coffee',
             per: ' Starbucks is best when shared. Treat your pals to a good cup of coffee.'
         },
-        {
+        {                                                                  
             id: 2,
             image: 'https://preprodtsbstorage.blob.core.windows.net/cms/uploads/7c6f7c64_3f89_4ba2_9af8_45fc6d94ad35_1_1bdd3bf075.webp',
             title: 'Keep Me Warm',
