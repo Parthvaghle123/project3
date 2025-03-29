@@ -88,7 +88,12 @@ h3{
         grid-template-columns: repeat(2, 1fr); 
     }
     
-  
+    .navbar .btn5{
+        width: 10%;
+    }
+    .navbar .btn4{
+        width: 10%;
+    }
 }
 @media (min-width: 2560px) {
     #root1 {
@@ -103,6 +108,9 @@ h3{
     .box{
         width: 100%;
     }
+    .navbar .btn5{
+        width: 20%;
+    }
    
 }
 @media (min-width: 1440px) {
@@ -116,6 +124,9 @@ h3{
 @media (min-width: 1024px) {
     #root1 {
         grid-template-columns: repeat(3, 1fr); 
+    }
+    .navbar .btn5{
+        width: 100%;
     }
 }
 
@@ -157,4 +168,46 @@ input[type="search"] {
 }
 .btn3{
     width: 100%;
+}
+.btn4{
+    width: 20%;
+}
+.btn5{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+}
+.btn5:hover{
+    background-color: white;
+    color: green;
+    font-weight: bold;
+}
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    padding: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+.form-control:focus {
+    border-color: green;
+    box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5);
+}
+.btn6{
+    width: 100%;
+    font-weight: bold;
+}
+.btn7{
+    width: 100%;
+    font-weight: bold;
+}
+.btn6:hover{
+    background-color: white;
+    color: gray;
+    font-weight: bold;
+}
+.btn7:hover{
+    background-color: white;
+    color: green;
+    font-weight: bold;
 }

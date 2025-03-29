@@ -1,3 +1,4 @@
+/* Images box Design */
 #root {
     width:100%;
     display: grid;
@@ -115,6 +116,8 @@ h2 {
 .images{
     background-color:white;
 }
+
+/* carousel-item */
 .carousel-inner {
     display: flex;
 }
@@ -127,4 +130,33 @@ h2 {
     font-size: 15px;
     padding: 5px 7px;
     display: none; 
+}
+
+/* Payment Design */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    padding: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+.form-control:focus {
+    border-color: green;
+    box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5);
+}
+.btn3{
+    font-weight: bold;
+}
+.btn3:hover{
+    background-color: white;
+    color: green;
+    font-weight: bold;
+}
+.btn4{
+    font-weight: bold;
+}
+.btn4:hover{
+    background-color: white;
+    color: gray;
+    font-weight: bold;
 }

@@ -6,6 +6,7 @@
     <title>D-Moll</title>
     <link rel="icon" type="image/x-icon" sizes="180x180"href="https://www.starbucks.in/assets/icon/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,7 +25,7 @@
         </h3>
       </a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler btn4"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -45,9 +46,6 @@
           <li class="nav-item">
             <a class="nav-link" href="index5.html">Order</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index7.html">Pay</a>
-          </li>
         </ul>
         <form class="d-flex">
           <input
@@ -56,17 +54,56 @@
             placeholder="Search"
             aria-label="Search"
             id="search" />
-          <button  id="searchButton"class="btn1 btn btn-success" onclick="searchProducts();" type="submit">
+          <button  id="searchButton"class="btn1 btn btn-success">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
-        <a class="navbar-brand ms-5" href="index6.html">
-          <button class="btn3 btn btn-cart"><i class="fa-solid fa-cart-shopping"></i>
-          </button>
-      </a>    
+        <div class="d-flex">
+          <a class="navbar-brand d-flex ms-5" href="index6.html">
+            <button class="btn3 btn btn-cart"><i class="fa-solid fa-cart-shopping"></i>
+            </button>  
+        </a>  
+        <button type="button" class="btn5 btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Pay</button>
+        </div>
       </div>
     </div>
   </nav>
+  <div class="modal fade" id="exampleModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title head">Payment Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="credit-card-form">
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control head" id="cardholder_name" placeholder="Cardholder Name" required />
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control head" id="card_number" placeholder="Card Number" maxlength="19" required />
+                    </div>
+                    <div class="form-row d-flex gap-2">
+                        <div class="form-group col-md-6 mb-3">
+                            <input type="text" class="form-control head" id="expiry_date" placeholder="MM/YY" maxlength="5" required />
+                        </div>
+                        <div class="form-group col-md-6 mb-3">
+                            <input type="text" class="form-control head" id="cvv" placeholder="CVV" maxlength="4" required />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer m-auto ">
+                <button type="button" class="btn6 btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            <div class="m-auto" >
+              <button type="button" class="btn7 btn btn-success" id="pay-now-btn">
+                <i class="fa fa-credit-card"></i> Pay Now
+            </button>
+            </div>
+        </div>
+    </div>
+  </div>
       <div class="Herosection_1">
         <div class="container">
           <h3 class="mt-4 text text-dark head">Anytime</h3>
@@ -177,6 +214,7 @@
           </div>
         </div>
       </footer>
+      <script src="validation2.js"></script>
       <script src="item1.js"></script>
       <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
