@@ -17,7 +17,7 @@
     background: rgba(237, 233, 233, 0.811);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 290px;
+    height: 300px;
 }
 
 .box:hover {
@@ -188,16 +188,8 @@ input[type="search"] {
     width: 100%;
     font-weight: bold;
 }
-.btn7{
-    width: 100%;
-    font-weight: bold;
-}
+
 .btn6:hover{
-    background-color: white;
-    color: gray;
-    font-weight: bold;
-}
-.btn7:hover{
     background-color: white;
     color: green;
     font-weight: bold;

@@ -197,16 +197,7 @@ input[type="search"] {
     width: 100%;
     font-weight: bold;
 }
-.btn7{
-    width: 100%;
-    font-weight: bold;
-}
 .btn6:hover{
-    background-color: white;
-    color: gray;
-    font-weight: bold;
-}
-.btn7:hover{
     background-color: white;
     color: green;
     font-weight: bold;
