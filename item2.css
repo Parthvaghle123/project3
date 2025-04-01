@@ -114,6 +114,9 @@ h3{
     .navbar .btn5{
         width: 20%;
     }
+    .navbar .btn4{
+        width: 8%;
+    }
     .modal-content{
         margin-top: 110px;
     }
