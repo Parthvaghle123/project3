@@ -88,6 +88,9 @@ h4{
     .navbar .btn4{
         width: 8%;
     }
+    .modal-content{
+        margin-top: 100px;
+    }
 }
 
 @media (min-width: 2560px) {
@@ -105,6 +108,9 @@ h4{
     }
     .navbar .btn5{
         width: 20%;
+    }
+    .modal-content{
+        margin-top: 90px;
     }
 }
 @media (min-width: 1440px) {
