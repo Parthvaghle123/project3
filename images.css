@@ -36,9 +36,7 @@ h2 {
     #root {
         grid-template-columns: repeat(3, 1fr); 
     }
-    .modal-content{
-        margin-top: 120px;
-    }
+
   
 }
 
@@ -46,6 +44,7 @@ h2 {
     #root {
         grid-template-columns: repeat(6, 1fr); 
     }
+
 }
 
 @media (max-width: 480px) {
@@ -55,9 +54,7 @@ h2 {
     .img-box{
         width: 90%;
     }
-    .modal-content{
-        margin-top: 110px;
-    }
+
    
 }
 @media (min-width: 1440px) {
@@ -69,6 +66,7 @@ h2 {
     #root {
         grid-template-columns: repeat(6, 1fr); 
     }
+
 }
 
 .Herosection_2 {
