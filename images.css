@@ -54,7 +54,9 @@ h2 {
     .img-box{
         width: 90%;
     }
-
+    .modal-content{
+        margin-top: 130px;
+    }
    
 }
 @media (min-width: 1440px) {
