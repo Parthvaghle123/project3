@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const root = document.getElementById('root1');
         if (root) {
             if (items.length === 0) {
-                root.innerHTML = `<h3 style="color: red; text-align: center;">No Product Found 😭</h3>`;
+                root.innerHTML = `<h3 style="color: red; text-align: center;">No Product Found </h3>`;
             } else {
                 root.innerHTML = items.map((item) =>
                     `<div class='box'>
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!cartContainer || !totalElement) return;
 
         if (cart.length === 0) {
-            cartContainer.innerHTML = `<h3 style="color: red; text-align: center;">Cart is Empty 😭</h3>`;
+            cartContainer.innerHTML = `<h3 style="color: red; text-align: center;">Cart is Empty </h3>`;
             totalElement.innerText = `Total: ₹0`;
         } else {
             cartContainer.innerHTML = cart.map((item, index) =>
