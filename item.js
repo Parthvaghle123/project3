@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!cartContainer || !totalElement) return;
 
         if (cart.length === 0) {
-            cartContainer.innerHTML = `<h3 style="color: red; text-align: center;">Cart is Empty3</h3>`;
+            cartContainer.innerHTML = `<h3 style="color: red; text-align: center;">Cart is Empty</h3>`;
             totalElement.innerText = `Total: ₹0`;
         } else {
             cartContainer.innerHTML = cart.map((item, index) =>
