@@ -70,6 +70,11 @@ h2 {
     }
 
 }
+@media (max-width:768px){
+    .modal-content{
+        margin-top: 100px;
+    }
+}
 
 .Herosection_2 {
     min-height: 610px;
